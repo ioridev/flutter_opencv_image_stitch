@@ -70,13 +70,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   print(dirpath);
                   stitch(imagePaths.toString().toNativeUtf8(),
                       dirpath.toNativeUtf8());
-                  //遅延
-                  Future.delayed(Duration(seconds: 1), () {}).then((_) {
-                    setState(() {
-                      print("stitch: ${DateTime.now().toString()}");
-
-                      _img = Image.file(File(dirpath));
-                    });
+                  setState(() {
+                    print("stitch: ${DateTime.now().toString()}");
+                    _img = Image.file(File(dirpath));
                   });
                 },
                 child: Text('Stitch')),
