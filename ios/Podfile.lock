@@ -1,27 +1,33 @@
 PODS:
-  - camera (0.0.1):
+  - camera_avfoundation (0.0.1):
     - Flutter
   - Flutter (1.0.0)
   - image_picker_ios (0.0.1):
     - Flutter
+  - path_provider_ios (0.0.1):
+    - Flutter
 
 DEPENDENCIES:
-  - camera (from `.symlinks/plugins/camera/ios`)
+  - camera_avfoundation (from `.symlinks/plugins/camera_avfoundation/ios`)
   - Flutter (from `Flutter`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
+  - path_provider_ios (from `.symlinks/plugins/path_provider_ios/ios`)
 
 EXTERNAL SOURCES:
-  camera:
-    :path: ".symlinks/plugins/camera/ios"
+  camera_avfoundation:
+    :path: ".symlinks/plugins/camera_avfoundation/ios"
   Flutter:
     :path: Flutter
   image_picker_ios:
     :path: ".symlinks/plugins/image_picker_ios/ios"
+  path_provider_ios:
+    :path: ".symlinks/plugins/path_provider_ios/ios"
 
 SPEC CHECKSUMS:
-  camera: 3164201dc344383e62282964016528c4f5a9ad50
+  camera_avfoundation: 07c77549ea54ad95d8581be86617c094a46280d9
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
   image_picker_ios: b786a5dcf033a8336a657191401bfdf12017dabb
+  path_provider_ios: 14f3d2fd28c4fdb42f44e0f751d12861c43cee02
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
 
