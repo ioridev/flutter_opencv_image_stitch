@@ -47,10 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
                 onPressed: () async {
                   final imageFiles = await _picker.pickMultiImage();
-                  debugPrint(
-                      '${imageFiles!.length} images selected from gallery');
                   List<String> imagePaths = [];
-                  imagePaths = imageFiles.map((imageFile) {
+                  imagePaths = imageFiles!.map((imageFile) {
                     return imageFile.path;
                   }).toList();
                   imagePaths.toString().toNativeUtf8();
@@ -63,11 +61,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           "/" +
                           DateTime.now().toString() +
                           "_.jpg";
-                  print(dirpath);
                   stitch(imagePaths.toString().toNativeUtf8(),
                       dirpath.toNativeUtf8());
                   setState(() {
-                    print("stitch: ${DateTime.now().toString()}");
                     _img = Image.file(File(dirpath));
                   });
                 },
