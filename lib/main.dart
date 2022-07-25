@@ -3,10 +3,7 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:ffi';
 import 'package:ffi/ffi.dart';
 import 'dart:io';
-import 'package:camera/camera.dart';
 import 'package:path_provider/path_provider.dart';
-
-import 'livecamera.dart';
 
 void main() {
   runApp(MyApp());
@@ -66,7 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           "/" +
                           DateTime.now().toString() +
                           "_.jpg";
-
                   print(dirpath);
                   stitch(imagePaths.toString().toNativeUtf8(),
                       dirpath.toNativeUtf8());
@@ -76,45 +72,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   });
                 },
                 child: Text('Stitch')),
-            _cameraButton(context),
-            _imageGalleryButton(),
             Center(child: _img),
           ],
         ),
       ),
     );
   }
-
-  ElevatedButton _imageGalleryButton() {
-    return ElevatedButton(
-      onPressed: () async {
-        final imageFile = await _picker.pickImage(source: ImageSource.gallery);
-        final imagePath =
-            imageFile?.path.toNativeUtf8() ?? "none".toNativeUtf8();
-        final gaussian = dylib.lookupFunction<Void Function(Pointer<Utf8>),
-            void Function(Pointer<Utf8>)>('Gaussian');
-        gaussian(imagePath);
-        setState(() {
-          _img = Image.file(File(imagePath.toDartString()));
-        });
-      },
-      child: Text("Pick Image from Gallery"),
-    );
-  }
-}
-
-ElevatedButton _cameraButton(BuildContext context) {
-  return ElevatedButton(
-      onPressed: () async {
-        WidgetsFlutterBinding.ensureInitialized();
-        // Obtain a list of the available cameras on the device.
-        final cameras = await availableCameras();
-        // Get a specific camera from the list of available cameras.
-        final firstCamera = cameras.first;
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => TakePictureScreen(camera: firstCamera)));
-      },
-      child: Text('Camera'));
 }
