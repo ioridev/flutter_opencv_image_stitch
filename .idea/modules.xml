@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/equirectangular_panorama_stitcher.iml" filepath="$PROJECT_DIR$/.idea/equirectangular_panorama_stitcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/opencv_image_stitch.iml" filepath="$PROJECT_DIR$/.idea/opencv_image_stitch.iml" />
     </modules>
   </component>
 </project>

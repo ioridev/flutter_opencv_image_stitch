@@ -1,6 +1,6 @@
 {
-    "name": "opencv_flutter_ffi",
-    "short_name": "opencv_flutter_ffi",
+    "name": "opencv_image_stitch",
+    "short_name": "opencv_image_stitch",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

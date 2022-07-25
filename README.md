@@ -1,4 +1,4 @@
-# opencv_flutter_ffi
+# opencv_image_stitch
 
 Uses dart:ffi to run OpenCV C++ 4.5.3 on Flutter App.
 

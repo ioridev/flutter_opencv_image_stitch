@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.opencv_flutter_ffi">
+    package="com.example.opencv_image_stitch">
    <application
-        android:label="opencv_flutter_ffi"
+        android:label="opencv_image_stitch"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
