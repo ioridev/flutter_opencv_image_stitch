@@ -2,7 +2,7 @@
 
 Uses dart:ffi to run OpenCV C++ 4.5.3 on Flutter App.
 
-Provided release with a sample gaussian blur
+Provided release with a sample stitch
 
 Please install OpenCV iOS Framework and put it at location ios/opencv2.framework
 
